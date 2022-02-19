@@ -1,0 +1,14 @@
+{
+  "name": "node-rest-api",
+  "version": "1.0.0",
+  "description": "node-rest-api",
+  "sampleUrl": false,
+  "defaultVersion": "0.0.0",
+  "apidoc": "0.3.0",
+  "generator": {
+    "name": "apidoc",
+    "time": "2021-11-28T01:07:39.216Z",
+    "url": "https://apidocjs.com",
+    "version": "0.26.0"
+  }
+}
