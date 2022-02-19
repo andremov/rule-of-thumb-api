@@ -18,11 +18,10 @@ router.get('/',async (req,res) => {
         .then(docs => {
             res.status(200).json({
                 count : docs.length,
-                products : docs
+                list : docs
             });
         })
         .catch(err=>{
-            console.log(err);
             res.status(500).json({error:err});
         })
 });
