@@ -1,7 +1,7 @@
 {
-  "name": "node-rest-api",
+  "name": "rule-of-thumb-poll-api",
   "version": "1.0.0",
-  "description": "node-rest-api",
+  "description": "Quick API made using express and mongoose, connected to a remote MongoDB instance.",
   "main": "index.js",
   "scripts": {
     "nodemon-start": "nodemon server.js",
@@ -15,6 +15,15 @@
     "morgan": "^1.10.0"
   },
   "devDependencies": {
-    "apidoc": "^0.50.3",
+    "apidoc": "^0.50.3"
+  },
+  "apidoc": {
+    "name": "rule-of-thumb-poll-api",
+    "version": "1.0.0",
+    "description": "Quick API made using express and mongoose, connected to a remote MongoDB instance.",
+    "apidoc": {
+      "title": "Rule of Thumb API",
+      "url": "https://www.andremov.dev/rule-of-thumb-api/"
+    }
   }
 }

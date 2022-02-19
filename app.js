@@ -1,13 +1,13 @@
 const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
-const morgan = require('morgan'); // LOGGING
-const bodyParser = require('body-parser'); // BODY PARSING
+const morgan = require('morgan');
+const bodyParser = require('body-parser');
 
 const CLUSTER = 'node-rest-api-test-byh61.mongodb.net';
 
 mongoose.connect(
-    `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASS}@${CLUSTER}/main-db?retryWrites=true&w=majority`,
+    `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASS}@${process.env.MONGO_CLUSTER}/main-db?retryWrites=true&w=majority`,
     {
         useNewUrlParser : true,
         useUnifiedTopology : true
@@ -34,11 +34,9 @@ app.use(( req, res, next ) => {
     next();
 });
 
-const productRoutes = require('./api/routes/products');
-const orderRoutes = require('./api/routes/orders');
+const pollRoutes = require('./api/routes/polls');
 
-app.use('/products', productRoutes);
-app.use('/orders', orderRoutes);
+app.use('/polls', pollRoutes);
 
 
 // 404
