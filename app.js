@@ -4,8 +4,6 @@ const mongoose = require('mongoose');
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
 
-const CLUSTER = 'node-rest-api-test-byh61.mongodb.net';
-
 mongoose.connect(
     `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASS}@${process.env.MONGO_CLUSTER}/main-db?retryWrites=true&w=majority`,
     {
